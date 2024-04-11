@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BillingReportController">
+    <children>
+        <Label fx:id="billingReportLabel" layoutX="200.0" layoutY="14.0" text="Billing Report" />
+        <TableView fx:id="billingTable" layoutX="42.0" layoutY="50.0" prefHeight="300.0" prefWidth="375.0">
+            <columns>
+                <TableColumn fx:id="customerIDColumn" prefWidth="75.0" text="Customer ID" />
+                <TableColumn fx:id="customerNameColumn" prefWidth="150.0" text="Customer Name" />
+                <TableColumn fx:id="amountPaidColumn" prefWidth="150.0" text="Amount Paid" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnClose" layoutX="200.0" layoutY="365.0" mnemonicParsing="false" text="Close" onAction="#closeWindow"/>
+    </children>
+</AnchorPane>

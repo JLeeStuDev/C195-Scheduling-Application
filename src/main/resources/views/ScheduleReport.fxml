@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefWidth="740.0" spacing="10.0" style="-fx-padding: 10 10 10 10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ScheduleReportController">
+    <Label fx:id="scheduleReportLabel" text="Schedule Report" />
+    <HBox spacing="10">
+        <ComboBox fx:id="contactComboBox" promptText="Select Contact" />
+    </HBox>
+    <TableView fx:id="scheduleTable" prefHeight="400.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="appointmentIdColumn" text="Appointment ID" />
+            <TableColumn fx:id="titleColumn" text="Title" />
+            <TableColumn fx:id="typeColumn" text="Type" />
+            <TableColumn fx:id="descriptionColumn" text="Description" />
+            <TableColumn fx:id="startDateColumn" text="Start Date" />
+            <TableColumn fx:id="startTimeColumn" text="Start Time" />
+            <TableColumn fx:id="endDateColumn" text="End Date" />
+            <TableColumn fx:id="endTimeColumn" text="End Time" />
+            <TableColumn fx:id="customerIdColumn" text="Customer ID" />
+        </columns>
+    </TableView>
+    <Button fx:id="btnClose" onAction="#closeWindow" text="Close">
+        <VBox.margin>
+            <Insets top="10.0" />
+        </VBox.margin>
+    </Button>
+</VBox>

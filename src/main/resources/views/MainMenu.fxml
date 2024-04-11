@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bpMainMenuMainPane" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainMenuController">
+
+    <!-- Reports Menus -->
+    <top>
+        <MenuBar>
+            <Menu fx:id="reportsMenu" text="Reports">
+                <MenuItem fx:id="appointmentReport" text="Appointment Report" onAction="#generateAppointmentReport"/>
+                <MenuItem fx:id="scheduleReport" text="Schedule Report" onAction="#generateScheduleReport"/>
+                <MenuItem fx:id="billingReport" text="Billing Report" onAction="#generateBillingReport"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+        <!-- Customer Records -->
+        <left>
+            <VBox style="-fx-padding: 0 0 0 10">
+                <Label fx:id="lblCustomers" style="-fx-font-size: 18;-fx-font-weight: bold;" text="Customers" />
+                <ScrollPane>
+                    <TableView fx:id="tvMainMenuCustomerTable" onMouseClicked="#HandleCustomerSelection" prefHeight="428.0">
+                        <columns>
+                            <TableColumn fx:id="tvcCustomerID" text="Customer ID" />
+                            <TableColumn fx:id="tvcCustomerName" text="Customer Name" />
+                            <TableColumn fx:id="tvcAddress" text="Address" />
+                            <TableColumn fx:id="tvcPostalCode" text="Postal Code" />
+                            <TableColumn fx:id="tvcPhone" text="Phone" />
+                            <TableColumn fx:id="tvcCustomerCreateDate" text="Create Date" />
+                            <TableColumn fx:id="tvcCustomerCreatedBy" text="Created By" />
+                            <TableColumn fx:id="tvcCustomerLastUpdate" text="Last Update" />
+                            <TableColumn fx:id="tvcCustomerLastUpdatedBy" text="Last Updated By" />
+                            <TableColumn fx:id="tvcDivisionID" text="Division ID" />
+                        </columns>
+                    </TableView>
+                </ScrollPane>
+
+                <!-- Buttons for our customers -->
+
+                <HBox spacing="10" style="-fx-padding: 10 0 0 0">
+                    <Button fx:id="btnAddCustomer" onAction="#AddCustomer" text="Add" />
+                    <Button fx:id="btnUpdateCustomer" onAction="#UpdateCustomer" text="Update" />
+                    <Button fx:id="btnDeleteCustomer" onAction="#DeleteCustomer" text="Delete" />
+                    <Button fx:id="btnRefreshCustomer" onAction="#RefreshCustomers" text="Refresh" />
+                </HBox>
+                <BorderPane.margin>
+                    <Insets bottom="25.0" top="25.0" />
+                </BorderPane.margin>
+            </VBox>
+        </left>
+
+        <!-- Appointment Table -->
+        <right>
+            <VBox style="-fx-padding: 0 10 0 0">
+                <Label fx:id="lblAppointments" style="-fx-font-size: 18;-fx-font-weight: bold;" text="Appointments" />
+
+                <!-- Tabs -->
+                <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+                    <!--All Appointments-->
+                    <tabs>
+                        <Tab fx:id="tabAllAppointments" text="All Appointments">
+                        </Tab>
+                    </tabs>
+                    <tabs>
+                        <Tab fx:id="tabByWeek" text="Weekly Appointments"/>
+                    </tabs>
+                    <tabs>
+                        <Tab fx:id="tabByMonth" text="Monthly Appointments" />
+                    </tabs>
+                </TabPane>
+
+                <ScrollPane>
+                    <TableView fx:id="tvMainMenuAppointmentTable">
+                        <columns>
+                            <TableColumn fx:id="tvcAppointmentID" text="Appointment ID" />
+                            <TableColumn fx:id="tvcTitle" text="Title" />
+                            <TableColumn fx:id="tvcDescription" text="Description" />
+                            <TableColumn fx:id="tvcLocation" text="Location" />
+                            <TableColumn fx:id="tvcContact" text="Contact" />
+                            <TableColumn fx:id="tvcType" text="Type" />
+                            <TableColumn fx:id="tvcStart" text="Start" />
+                            <TableColumn fx:id="tvcEnd" text="End" />
+                            <!--<TableColumn fx:id="tvcAppointmentCreateDate" text="Create Date" />
+                            <TableColumn fx:id="tvcAppointmentCreatedBy" text="Created By" />
+                            <TableColumn fx:id="tvcAppointmentLastUpdate" text="Last Update" />
+                            <TableColumn fx:id="tvcAppointmentLastUpdatedBy" text="Last Updated By" />-->
+                            <TableColumn fx:id="tvcAppointmentCustomerID" text="Customer ID" />
+                            <TableColumn fx:id="tvcUserID" text="User ID" />
+                            <!--<TableColumn fx:id="tvcContactID" text="Contact ID" />-->
+                        </columns>
+                    </TableView>
+                </ScrollPane>
+
+                <!-- Buttons for out Appointments -->
+                <HBox spacing="10" style="-fx-padding: 10 0 0 0">
+                    <Button fx:id="btnAddAppointment" onAction="#HandleAddAppointment" text="Add" />
+                    <Button fx:id="btnUpdateAppointment" onAction="#UpdateAppointment" text="Update" /><!--onAction="#UpdateAppointment"-->
+                    <Button fx:id="btnCancelAppointment" onAction="#DeleteAppointment" text="Cancel" />
+                    <Button fx:id="btnRefreshAppointment" onAction="#RefreshAppointments" text="Refresh" /> <!--onAction="#RefreshAppointment" /> -->
+                </HBox>
+                <BorderPane.margin>
+                    <Insets bottom="25" left="25.0" top="25.0" />
+                </BorderPane.margin>
+            </VBox>
+        </right>
+
+    </BorderPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="800" maxWidth="800" minHeight="375.0" minWidth="325.0" prefHeight="375.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdateAppointmentController">
+    <VBox alignment="CENTER" spacing="10">
+        <Label fx:id="lblTitle" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Update Appointment" />
+
+        <GridPane alignment="CENTER" hgap="10" style="-fx-padding: 0 0 0 25" vgap="5">
+            <!-- Appointment ID -->
+            <Label fx:id="lblAppointmentID" text="Appointment ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="tfUAAppointmentID" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <!-- Title -->
+            <Label fx:id="lblAppointmentTitle" text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="tfUAAppointmentTitle" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <!-- Description -->
+            <Label fx:id="lblAppointmentDescription" text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="tfUAAppointmentDescription" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <!-- Location -->
+            <Label fx:id="lblAppointmentLocation" text="Location:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="tfUAAppointmentLocation" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <!-- Contact -->
+            <Label fx:id="lblAppointmentContact" text="Contact:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cbUAAppointmentContact" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+            <!-- Type -->
+            <Label fx:id="lblAppointmentType" text="Type:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <TextField fx:id="tfUAAppointmentType" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+            <!-- Start Date -->
+            <Label fx:id="lblAppointmentStartDate" text="Start Date:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <DatePicker fx:id="dpUAAppointmentStartDate" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+            <!-- End Date -->
+            <Label fx:id="lblAppointmentEndDate" text="End Date:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <DatePicker fx:id="dpUAAppointmentEndDate" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+            <!-- Start Time -->
+            <Label fx:id="lblAppointmentStartTime" text="Start Time:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <ComboBox fx:id="cbUAAppointmentStartTime" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <!-- <TextField fx:id="tfUAAppointmentStartTime" GridPane.columnIndex="1" GridPane.rowIndex="8" /> -->
+
+            <!-- End Time -->
+            <Label fx:id="lblAppointmentEndTime" text="End Time:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+            <ComboBox fx:id="cbUAAppointmentEndTime" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <!-- <TextField fx:id="tfUAAppointmentEndTime" GridPane.columnIndex="1" GridPane.rowIndex="9" /> -->
+
+            <!-- Save Button -->
+            <Button fx:id="btnSave" text="Save" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+
+            <!-- Cancel Button -->
+            <Button fx:id="btnCancel" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="10" /> <!-- onAction="#cancel" -->
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </VBox>
+</AnchorPane>

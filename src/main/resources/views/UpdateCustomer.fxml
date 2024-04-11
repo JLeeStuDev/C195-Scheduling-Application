@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="800" maxWidth="800" minHeight="200" minWidth="301.0" prefHeight="296.0" prefWidth="333.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdateCustomerController">
+    <VBox alignment="CENTER" spacing="10">
+        <Label fx:id="lblTitle" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Update Customer" />
+
+        <GridPane alignment="CENTER" hgap="10" style="-fx-padding: 0 0 0 25" vgap="5">
+            <Label fx:id="lblCustomerID" text="Customer ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="tfUCCustomerID" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label fx:id="lblCustomerName" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="tfUCCustomerName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label fx:id="lblAddress" text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="tfUCAddress" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label fx:id="lblPostalCode" text="Postal Code:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="tfUCPostalCode" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Label fx:id="lblPhoneNumber" text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="tfUCPhoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+            <Label fx:id="lblUCFirstLevelDivision" text="States/Provinces:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <ComboBox fx:id="cbUCFirstLevelDivision" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+            <Label fx:id="lblCountry" text="Country:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <ComboBox fx:id="cbUCCountry" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <HBox spacing="10" style="-fx-padding: 0 0 0 25">
+            <Button fx:id="btnSave" text="Save" onAction="#updateCustomer"/>
+            <Button fx:id="btnCancel" text="Cancel" onAction="#closeUpdateCustomerWindow" />
+        </HBox>
+    </VBox>
+</AnchorPane>
